@@ -15,7 +15,6 @@ function App() {
     wordCount
   } =  UseSpeedType()
  
-
   return (
     <div className="App">
       <h1>How fast can you type?</h1>
@@ -30,7 +29,10 @@ function App() {
         onChange={onWordChange}
       />
 
-      <select className='options' ref={selectEl} disabled={isrunning} className="duration--Options">
+      <select 
+        className="duration--Options"
+      ref={selectEl}
+       disabled={isrunning}>
         <option value={remainingTime}>
           {remainingTime > 0 ? remainingTime : "pick a countdown"}{" "}
         </option>
