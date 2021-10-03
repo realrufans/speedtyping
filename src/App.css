@@ -1,11 +1,21 @@
-.App {
-  text-align: center;
+body{
+  margin: 0;
+  padding: 0;
+  background-color: rgba(216, 223, 224, 0.719);
+  
 }
 
-.App-logo {
-  height: 40vmin;
-  pointer-events: none;
+.App {
+ 
+  text-align: center;
+  display: flex;
+  flex-direction: column;
+  text-transform: capitalize;
+  margin: 5em 2em;
+  
 }
+
+ 
 
 @media (prefers-reduced-motion: no-preference) {
   .App-logo {
@@ -13,26 +23,116 @@
   }
 }
 
-.App-header {
-  background-color: #282c34;
-  min-height: 100vh;
-  display: flex;
-  flex-direction: column;
-  align-items: center;
-  justify-content: center;
-  font-size: calc(10px + 2vmin);
+h1 {
+  text-transform: capitalize;
+  color: black;
+  font-family:'Gill Sans', 'Gill Sans MT', Calibri, 'Trebuchet MS', sans-serif;
+  overflow: hidden; /* Ensures the content is not revealed until the animation */
+  border-right: .15em solid orange; /* The typwriter cursor */
+  white-space: nowrap; /* Keeps the content on a single line */
+  margin: 0 auto; /* Gives that scrolling effect as the typing happens */
+  letter-spacing: .1em; /* Adjust as needed */
+     font-weight: bold;
+     font-size: 1.5rem;
+          
+   animation: 
+    typing 1s steps(30, end),
+    blink-caret .5s step-end infinite;
+}
+
+/* The typing effect */
+@keyframes typing {
+  from { width: 0 }
+  to { width: 100% }
+}
+
+/* The typewriter cursor effect */
+@keyframes blink-caret {
+  from, to { border-color: transparent }
+  50% { border-color: rgb(24, 24, 23) }
+}
+
+
+
+.typing-Space{
+  resize: none;
+  margin: 0 auto;
+  margin-top: 2em;
+  margin-bottom: 1em;
+
+  width: 90%;
+  min-height: 10vh;
+  font-size: 16px;
+  padding: 0.5em;
+  text-transform:unset;
+ 
+}
+
+.duration--Options{
+  width: 80%;
+  text-align-last: center;
+  border-radius: 0.5em;
+  margin: 0 auto;
+  font-size: 1.5rem;
+ 
+  background-color: rgb(195, 199, 216);
+
+  color: rgb(0, 0, 0);
+}
+
+.timeRemaining{
+  font-size: 1.5rem;
+}
+.btn{
+  width: 80%;
+  margin: 0 auto;
+  padding: 1.2em;
+  cursor: pointer;
+  height: 7vh;
+  background-color: rgb(39, 45, 75);
   color: white;
+  border-radius: 0.5em;
+  font-size: 1rem;
+}
+.btn:hover{
+  background-color: rgb(63, 64, 65);
 }
 
-.App-link {
-  color: #61dafb;
+textarea:disabled, .btn:disabled  {
+  background-color: #a5a2a2;
 }
 
-@keyframes App-logo-spin {
-  from {
-    transform: rotate(0deg);
+@media (min-width: 700px) {
+  .Apps{
+    display: flex;
+     flex-wrap: wrap;
   }
-  to {
-    transform: rotate(360deg);
+  .typing-Space{
+    width: 80%;
+    height: 30vh;
+     
   }
+  .duration--Options{
+      width: 25%;
+      margin: 0 auto;
+   }
+   .btn{
+     order: 0;
+     margin-top: 1em;
+   }
+   .timeRemaining{
+     order: 1;
+     width: 100%;
+   }
+   .word--count{
+     order: 3;
+     width: 100%;
+   }
+   
+    
 }
+
+
+ 
+
+ 
