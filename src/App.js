@@ -25,6 +25,7 @@ function App() {
         className="typing-Space"
         ref={inputEl}
         value={wordsInput}
+        placeholder='type in your words here...'
         name="wordsInput"
         onChange={onWordChange}
       />
